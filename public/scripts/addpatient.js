@@ -1,8 +1,10 @@
 var URL = location.protocol + '//' + location.host;
 
-$(document).ready(function() {
+$(document).ready(
+    function() {
     var diseasesAPI = URL + "/app/getdiseases";
-    $.getJSON(diseasesAPI).done(function(allDiseases) {
+     
+     $.getJSON(diseasesAPI).done(function(allDiseases) {
          var diseasesScoresCheckboxes = [];
 
          for(var disease in allDiseases) {

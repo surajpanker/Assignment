@@ -37,12 +37,15 @@ router.post('/login',
 
 // the Middleware for authetification -> provided by the passport library
 passport.use(new LocalStrategy(
-  function(username, password, done) {
-      User.getUserByUsername(username, function(err, user) {
+  function(username, password, done)
+        {
+      User.getUserByUsername(username, function(err, user) 
+          {
           if (err) {
               throw err;
           }
-          if (! user) {
+          if (! user) 
+             {
               //     done(error, found the user)
               return done(null, false, {message: "Unknown User"});
           }

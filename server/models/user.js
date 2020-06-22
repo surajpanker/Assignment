@@ -46,6 +46,8 @@ function createUser(newUser, callback) {
 	  	  });
 	});
 }
+
+
 module.exports.createUser = createUser;
 
 module.exports.getUserByUsername = function(username, callback) {
